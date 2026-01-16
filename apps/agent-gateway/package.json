@@ -1,0 +1,33 @@
+{
+  "name": "@cloudrmm/agent-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "description": "CloudRMM Agent Gateway - WebSocket gateway for agent communication",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "clean": "rm -rf dist",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint src --ext .ts"
+  },
+  "dependencies": {
+    "@cloudrmm/db": "workspace:*",
+    "@cloudrmm/types": "workspace:*",
+    "@cloudrmm/utils": "workspace:*",
+    "@fastify/websocket": "^11.0.1",
+    "fastify": "^5.2.1",
+    "dotenv": "^16.4.7",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@cloudrmm/eslint-config": "workspace:*",
+    "@cloudrmm/tsconfig": "workspace:*",
+    "@types/node": "^22.10.6",
+    "@types/ws": "^8.5.13",
+    "eslint": "^8.57.1",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
